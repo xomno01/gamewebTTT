@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #121212; /* Darker than bg-gray-900 for more depth */
+    color: #e0e0e0; /* text-gray-200 like */
+    height: 100vh;
+    overflow: hidden; /* Prevent body from scrolling */
+}
+
+.log-message-enter {
+    opacity: 0;
+    transform: translateY(10px);
+}
+.log-message-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+/* Animations for Rarity Text */
+@keyframes ancient-text-glow {
+    0%, 100% {
+        background-position: 0% 50%;
+        text-shadow: 0 0 3px rgba(236, 72, 153, 0.5), 0 0 5px rgba(168, 85, 247, 0.4), 0 0 7px rgba(250, 204, 21, 0.3);
+    }
+    50% {
+        background-position: 100% 50%;
+        text-shadow: 0 0 5px rgba(236, 72, 153, 0.7), 0 0 8px rgba(168, 85, 247, 0.6), 0 0 10px rgba(250, 204, 21, 0.5);
+    }
+}
+.animate-ancient-text {
+    background-size: 300% 300%; /* Larger size for smoother gradient animation */
+    animation: ancient-text-glow 4s ease-in-out infinite;
+}
+
+@keyframes ultimate-text-glow {
+    0%, 100% {
+        opacity: 0.9;
+        text-shadow: 0 0 5px #fef08a, 0 0 10px #fde047, 0 0 15px #facc15, 0 0 20px #eab308;
+    }
+    50% {
+        opacity: 1;
+        text-shadow: 0 0 8px #fef08a, 0 0 15px #fde047, 0 0 25px #facc15, 0 0 30px #eab308, 0 0 35px #ca8a04;
+    }
+}
+.animate-ultimate-text {
+     background-size: 200% 200%;
+    animation: ultimate-text-glow 2.5s ease-in-out infinite alternate, ancient-text-glow 5s linear infinite; /* Combine with a slower gradient shift */
+}
+
+/* Scrollbar styling */
+.scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #4b5563 #1f2937; /* thumb track */
+}
+.scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+    background: #1f2937;
+    border-radius: 10px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+    border-radius: 10px;
+    border: 2px solid #1f2937;
+}
+.scrollbar-thumb-gray-600::-webkit-scrollbar-thumb {
+    background-color: #4b5563; /* Tailwind gray-600 */
+}
+.scrollbar-track-gray-800::-webkit-scrollbar-track {
+    background: #1f2937; /* Tailwind gray-800 */
+}
