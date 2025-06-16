@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Tiên Giả Lập - Vạn Pháp Quy Tông</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS sẽ được Vite inject vào đây, không cần CDN nữa -->
+    <!-- Importmap đã được loại bỏ hoàn toàn -->
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.50.0",
+    "vite": "https://esm.sh/vite@^6.3.5",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^4.5.2"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="scrollbar-thin">
+    <div id="root" class="h-full"></div>
+    <script type="module" src="/src/index.tsx"></script> {/* Trỏ tới entry point mới trong thư mục src */}
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
